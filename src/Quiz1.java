@@ -48,8 +48,12 @@ a	b	n	result
             remainBottle = (remainBottle/a*b + remainBottle%a);
         }
 
+
+
         return answer;
     }
 }
+
+
 
 // 통과!!
