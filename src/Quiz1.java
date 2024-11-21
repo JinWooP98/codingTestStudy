@@ -39,12 +39,14 @@ a	b	n	result
     int solution(int a, int b, int n) {
         int answer = 0;
 
+        // 남아있는 병수
         int remainBottle = n;
 
         while(remainBottle >= a) {
-
+            // 남아있는 병수로 받을수 있는 병수
             answer += ((remainBottle/a)*b);
 
+            // 바꾸고 남은 병수 + 먹고 생시는 병수를 다시 계산
             remainBottle = (remainBottle/a*b + remainBottle%a);
         }
 
