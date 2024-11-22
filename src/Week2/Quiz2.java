@@ -22,14 +22,17 @@ public class Quiz2 {
 
         }
 
+        // 최고점수 확인
         int maxScore = Math.max(score[0], Math.max(score[1], score[2]));
 
+        // 최고점수랑 같은 유저번호 가져오기
         for(int i =0; i < 3; i++) {
             if(score[i] == maxScore) {
                 answer.add(i+1);
             }
         }
 
+        // List를 int[]로 변환
         return answer.stream().mapToInt(i -> i).toArray();
     }
 }
